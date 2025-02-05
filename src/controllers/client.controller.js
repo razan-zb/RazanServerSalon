@@ -5,6 +5,7 @@ import 'dotenv/config';
 export class ClientController {
   static async createClient(req, res) {
     try {
+
       const clientData = req.body;
       const client = await ClientService.createClient(clientData);
       return res.status(201).json(client);

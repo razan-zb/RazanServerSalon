@@ -4,6 +4,7 @@ export class SupplierController {
   static async createSupplier(req, res) {
     try {
       const supplierData = req.body;
+      console.log(supplierData)
       const supplier = await SupplierService.createSupplier(supplierData);
       return res.status(201).json(supplier);
     } catch (error) {

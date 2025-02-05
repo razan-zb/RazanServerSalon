@@ -2,7 +2,7 @@ import { ClientDal } from '../dal/client.dal.js';
 
 export class ClientService {
   static async createClient(clientData) {
-    return ClientDal.updateClient(clientData.phoneNumber, clientData);
+    return ClientDal.createClient(clientData);
   }
 
   static async getClients({ page = 1, limit = 10, sortBy = 'name', order = 'asc' }) {

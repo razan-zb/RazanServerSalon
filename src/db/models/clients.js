@@ -2,6 +2,11 @@ import mongoose from 'mongoose';
 
 const clientSchema = new mongoose.Schema(
   {
+    _id: {
+      type: String,
+      required: true,
+      unique: true,
+    },
     name: {
       type: String,
       required: true,
@@ -9,7 +14,6 @@ const clientSchema = new mongoose.Schema(
     phoneNumber: {
       type: String,
       required: true,
-      unique: true,
     },
     birthday: {
       type: Date,
@@ -32,7 +36,6 @@ const clientSchema = new mongoose.Schema(
       required: true,
     },
     problemsOrNotes: {
-      // General notes or problems related to the client
       type: String,
       required: false,
     },

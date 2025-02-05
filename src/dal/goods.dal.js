@@ -7,11 +7,11 @@ export class GoodsDal {
   }
 
   static async getGoods() {
-    return Goods.find().populate('supplier'); // Populate supplier details if available
+    return Goods.find();
   }
 
   static async getGoodsById(goodsId) {
-    return Goods.findById(goodsId).populate('supplier');
+    return Goods.findById(goodsId);
   }
 
   static async updateGoods(goodsId, updateData) {

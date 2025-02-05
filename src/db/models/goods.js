@@ -2,6 +2,10 @@ import mongoose from 'mongoose';
 
 const goodsSchema = new mongoose.Schema(
   {
+    _id: {
+    type: String,
+    required: true,
+    },
     name: {
       type: String,
       required: true,
@@ -10,14 +14,9 @@ const goodsSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    supplier: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Supplier', // Reference to the Supplier model
-      required: false, // Optional if the supplier is not always associated
-    },
     price: {
       type: Number,
-      required: true,
+      required: false,
     },
     notes: {
       type: String,
