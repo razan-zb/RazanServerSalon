@@ -1,5 +1,5 @@
-import bcrypt from 'bcrypt';
 import { UserDal } from '../dal/user.dal.js';
+import bcrypt from 'bcryptjs';
 
 export class UserService {
   
