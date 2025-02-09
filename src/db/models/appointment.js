@@ -13,7 +13,7 @@ const appointmentSchema = new mongoose.Schema(
     },
     time: {
       type: String,
-      required: true, // Time of the appointment
+      required: true,
     },
     service: {
       type: String,

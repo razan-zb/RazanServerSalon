@@ -5,10 +5,7 @@ import 'dotenv/config'; // Automatically loads the .env file
 const secretKey = process.env.JWT_SECRET_KEY; 
 
 
-
 export class UserController {
- 
-
   static async registerUser(req, res) {
     const userData = req.body;
     const user = await UserService.createUser(userData);
