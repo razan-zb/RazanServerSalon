@@ -5,8 +5,8 @@ export class AppointmentService {
     return AppointmentDal.createAppointment(appointmentData);
   }
 
-  static async getAppointments({ page = 1, limit = 10, clientId = null, date = null }) {
-    return AppointmentDal.getAppointments({ page, limit, clientId, date });
+  static async getAppointments() {
+    return AppointmentDal.getAppointments();
   }
 
   static async getAppointmentById(appointmentId) {

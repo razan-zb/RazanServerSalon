@@ -12,17 +12,9 @@ export class AppointmentDal {
   }
 
   // Get all appointments with optional filtering and pagination
-  static async getAppointments({ page = 1, limit = 10, clientId = null, date = null }) {
+  static async getAppointments() {
     try {
-      const query = {};
-      if (clientId) query.client = clientId;
-      if (date) query.date = date;
-
-      const skip = (page - 1) * limit;
-      return await Appointment.find(query)
-        .populate('client', 'name phone') // Populates client info
-        .skip(skip)
-        .limit(limit);
+      return await Appointment.find()
     } catch (error) {
       throw new Error(`Error fetching appointments: ${error.message}`);
     }

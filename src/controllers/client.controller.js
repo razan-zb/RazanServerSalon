@@ -17,8 +17,7 @@ export class ClientController {
 
   static async getClients(req, res) {
     try {
-      const { page = 1, limit = 10, sortBy = 'name', order = 'asc' } = req.query;
-      const clients = await ClientService.getClients({ page, limit, sortBy, order });
+      const clients = await ClientService.getClients();
       return res.json(clients);
     } catch (error) {
       console.error('Error fetching clients:', error);

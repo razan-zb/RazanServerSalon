@@ -5,8 +5,8 @@ export class ClientService {
     return ClientDal.createClient(clientData);
   }
 
-  static async getClients({ page = 1, limit = 10, sortBy = 'name', order = 'asc' }) {
-    return ClientDal.getClients({ page, limit, sortBy, order });
+  static async getClients() {
+    return ClientDal.getClients();
   }
 
   static async getClientByEmail(clientEmail) {

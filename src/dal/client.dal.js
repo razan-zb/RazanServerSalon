@@ -10,11 +10,10 @@ export class ClientDal {
     }
   }
 
-  static async getClients({ page = 1, limit = 10, sortBy = 'name', order = 'asc' }) {
+  static async getClients() {
     try {
-      const skip = (page - 1) * limit;
-      const sortOrder = order === 'asc' ? 1 : -1;
-      return await Client.find().sort({ [sortBy]: sortOrder }).skip(skip).limit(limit);
+  
+      return await Client.find();
     } catch (error) {
       throw new Error(`Error fetching clients: ${error.message}`);
     }

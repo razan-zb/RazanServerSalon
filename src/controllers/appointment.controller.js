@@ -14,8 +14,7 @@ export class AppointmentController {
 
   static async getAppointments(req, res) {
     try {
-      const { page = 1, limit = 10, clientId = null, date = null } = req.query;
-      const appointments = await AppointmentService.getAppointments({ page, limit, clientId, date });
+      const appointments = await AppointmentService.getAppointments();
       return res.json(appointments);
     } catch (error) {
       console.error('Error fetching appointments:', error);
