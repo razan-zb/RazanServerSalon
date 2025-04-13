@@ -20,7 +20,6 @@ export class GoodsDal {
       runValidators: true,
     });
   }
-
   static async deleteGoods(goodsId) {
     return Goods.findByIdAndDelete(goodsId);
   }
