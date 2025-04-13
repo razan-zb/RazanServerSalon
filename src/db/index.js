@@ -8,7 +8,6 @@ import mongoose from "mongoose";
 
 const connectDb = async () => {
   mongoose.set("strictQuery", true);
-  await mongoose.connect("mongodb+srv://razan:razan1811@cluster0.eugf2w6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+  await mongoose.connect("mongodb+srv://Razan:Razan1811@cluster0.qk3al.mongodb.net/?retryWrites=true");
 };
-
 export { connectDb };
