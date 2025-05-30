@@ -14,6 +14,7 @@ const clientSchema = new mongoose.Schema(
     phoneNumber: {
       type: String,
       required: true,
+      unique: true,
     },
     birthday: {
       type: Date,
