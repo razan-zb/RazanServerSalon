@@ -60,6 +60,7 @@ const userSchema = new mongoose.Schema({
       day: Number, // 0 for Sunday, 1 for Monday, etc.
       startTime: String, // Example: '13:00'
       endTime: String, // Example: '19:00'
+      blockedSlots: [String],
     },
   ],
 
